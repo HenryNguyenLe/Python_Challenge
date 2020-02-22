@@ -40,7 +40,7 @@ with open(election_csv, 'r', newline="", encoding='utf-8') as csvfile:
           
             
 #  Calculate the percentage of votes each candidate won and make a list of all percentages
-perc_list = []  # empty list to store total votes of each candidate
+perc_list = []  # empty list to store vote percentage of each candidate
 for each_candidate in range(len(candidate_list)):
     vote_perc = round (candidate_vote_count[each_candidate] / total_votes * 100, 2)
     perc_list.append (vote_perc)
@@ -65,6 +65,12 @@ second_place_candidate = list(sorted_candidate_dict.keys())[1]
 
 
 # print terminal headers
+print('-------------------------------------------------')
+print('-------------------------------------------------')
+print('')
+print('Student Name: Henry Le / MW Class')
+print('')
+print('-------------------------------------------------')
 print('-------------------------------------------------')
 print('Houston Mayoral Election Results')
 print('-------------------------------------------------')
@@ -93,6 +99,12 @@ print('=================================================\n')
 # export a txt file with the results
 output_path = os.path.join('Houston_Mayoral_Election_Results.txt')
 with open(output_path, "w", newline="") as outputfile:
+    outputfile.write('-------------------------------------------------\n')
+    outputfile.write('-------------------------------------------------\n')
+    outputfile.write('\n')
+    outputfile.write('Student Name: Henry Le / MW Class')
+    outputfile.write('\n')
+    outputfile.write('-------------------------------------------------\n')
     outputfile.write('-------------------------------------------------\n')
     outputfile.write('Houston Mayoral Election Results \n')
     outputfile.write('-------------------------------------------------\n')
