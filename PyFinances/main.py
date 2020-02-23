@@ -77,7 +77,7 @@ print('============  THE END OF THIS REPORT  ===========')
       
       
 # Export reports to a txt file
-budget_report_path = os.path.join('Budget Report File.txt')
+budget_report_path = os.path.join('Budget_Report_File.txt')
 with open(budget_report_path, 'w', newline='', encoding="utf-8") as outputreport:
         outputreport.write('===========  BEGINNING OF THIS REPORT  ==========\n')
         outputreport.write('\n')
