@@ -46,8 +46,9 @@ Both Python programs were developed to summarize data:
 
 ## 5. Highlights of Key Process
 * File Handler with `with open()`.
-* Loop thru all CSV rows with `for`.
+* Loop thru all CSV rows and extract data with `for` loop.
 * Append data to Lists with `list.append()`.
+* Numerical dtype transformation: `round()`, `sum()`, `int()`, etc.
 * Perform simple math do add, or subtract data.
 * Write output to _.txt_ file with `.write()`.
 
