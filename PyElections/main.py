@@ -4,7 +4,7 @@ import csv
 import operator
 
 
-# define colors for 
+# define colors for: 
 red = '\033[31m'
 grn = '\033[32m'
 blu = '\033[34m'
@@ -105,7 +105,7 @@ print(f'============  {bolt}THE END OF THIS REPORT{nc}  ===========\n')
 print('=================================================\n')
 
 # export a txt file with the results
-output_path = os.path.join('Houston_Mayoral_Election_Results.txt')
+output_path = os.path.join('Election_Results.txt')
 with open(output_path, "w", newline="") as outputfile:
     outputfile.write('-------------------------------------------------\n')
     outputfile.write('-------------------------------------------------\n')
