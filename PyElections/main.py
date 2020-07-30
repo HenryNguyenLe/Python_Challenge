@@ -73,6 +73,7 @@ first_place_candidate = list(sorted_candidate_dict.keys())[0]
 second_place_candidate = list(sorted_candidate_dict.keys())[1]
 
 # print terminal headers
+print('')
 print(f'===========  {bolt}BEGINNING OF THIS REPORT{nc}  ==========')
 print('')
 print(f'Author: {red}{bolt}Henry Le{nc}')
@@ -101,6 +102,7 @@ print(f'2nd Advancing Candidate:  {blu}{second_place_candidate}{nc}')
 print('-------------------------------------------------')
 
 print(f'============  {bolt}END OF THIS REPORT{nc}  ===========\n')
+print('')
 
 # export a txt file with the results
 output_path = os.path.join('Election_Results.txt')
@@ -125,5 +127,5 @@ with open(output_path, "w", newline="") as outputfile:
     outputfile.write(f'1st Advancing Candidate:  {first_place_candidate}\n')
     outputfile.write(f'2nd Advancing Candidate:  {second_place_candidate}\n')
     outputfile.write('\n')
-    outputfile.write('============  THE END OF THIS REPORT  ===========\n')
+    outputfile.write('============  END OF THIS REPORT  ===========\n')
     

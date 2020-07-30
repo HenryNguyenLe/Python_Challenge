@@ -2,6 +2,14 @@
 import os
 import csv
 
+# define colors for: 
+red = '\033[31m'
+grn = '\033[32m'
+blu = '\033[34m'
+yel = '\033[33m'
+nc = '\033[30m'
+bolt = '\033[1m'
+
 # Build the path to the current csv file
 fin_path = os.path.join('Resources','budget_data.csv')
 
@@ -58,30 +66,31 @@ greatest_decrease_month = loss_gain_date[greatest_decrease_index + 1]
 
 
 # Print all results into Terminal
+print('')
 print('===========  BEGINNING OF THIS REPORT  ==========')
 print('')
-print('Student Name: Henry Le  /  MW-Class')
+print(f'Author: {red}{bolt}Henry Le{nc}')
 print('')
 print('-------------------------------------')
 print('')
-print('FINANCIAL ANALYSIS RESULTS')
+print(f'{bolt}FINANCIAL ANALYSIS RESULTS{nc}')
 print('')
 print('-------------------------------------')
-print(f'Total Months: {total_month}')
-print(f'Total: ${total_loss_gain}')
+print(f'Total Months: {blu}{total_month}{nc}')
+print(f'Total: {yel}${total_loss_gain}{nc}')
 print(f'Average  Change: ${format(average_change,",")}')
-print(f'Greatest Increase in Profits: {greatest_increase_month} (${format(greatest_increase,",")})')
-print(f'Greatest Decrease in Profits: {greatest_decrease_month} (${format(greatest_decrease,",")})')
+print(f'Greatest Increase in Profits: {grn}{greatest_increase_month} {yel}(${format(greatest_increase,",")}){nc}')
+print(f'Greatest Decrease in Profits: {red}{greatest_decrease_month} {yel}(${format(greatest_decrease,",")}){nc}')
 print('')
 print('============  THE END OF THIS REPORT  ===========')
-      
+print('')  
       
 # Export reports to a txt file
-budget_report_path = os.path.join('Budget_Report_File.txt')
+budget_report_path = os.path.join('Budget_Report.txt')
 with open(budget_report_path, 'w', newline='', encoding="utf-8") as outputreport:
         outputreport.write('===========  BEGINNING OF THIS REPORT  ==========\n')
         outputreport.write('\n')
-        outputreport.write('Student Name: Henry Le  /  MW-Class')
+        outputreport.write('Author: Henry Le')
         outputreport.write('\n')
         outputreport.write('-------------------------------------\n')
         outputreport.write('\n')
