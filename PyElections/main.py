@@ -4,7 +4,15 @@ import csv
 import operator
 
 
+# define colors for 
+red = '\033[31m'
+grn = '\033[32m'
+blu = '\033[34m'
+nc = '\033[30m'
+bolt = '\033[1m'
+
 # create the path to raw election data
+# use os path to eliminate issue with 'slash' btw different os 
 election_csv = os.path.join('Resources','houston_election_data.csv')
 
 
@@ -68,15 +76,15 @@ second_place_candidate = list(sorted_candidate_dict.keys())[1]
 print('-------------------------------------------------')
 print('-------------------------------------------------')
 print('')
-print('Student Name: Henry Le / MW Class')
+print('Author: Henry Le')
 print('')
 print('-------------------------------------------------')
 print('-------------------------------------------------')
-print('Houston Mayoral Election Results')
+print(f'{bolt}Houston Mayoral Election Results{nc}')
 print('-------------------------------------------------')
 
 # print the total number of votes cast 
-print(f'Total Cast Votes: {total_votes}')
+print(f'Total Cast Votes: {blu}{"{:,.0f}".format(total_votes)}{nc}')
 print('-------------------------------------------------')
 
 
@@ -84,16 +92,16 @@ print('-------------------------------------------------')
 # print the percentage of votes each candidate won
 # print the total number of votes each candidate won
 for each_name in range(len(sorted_candidate_name)):
-    print(f'{sorted_candidate_name[each_name]} : {sorted_vote_perc[each_name]}% ({sorted_vote_count[each_name]})')
+    print(f'{sorted_candidate_name[each_name]} : {sorted_vote_perc[each_name]}% ({"{:,.0f}".format(sorted_vote_count[each_name])})')
 
     
 # print the names of the two candidates who will advance to the runoff election.
 print('-------------------------------------------------')
-print(f'1st Advancing Candidate:  {first_place_candidate}')
-print(f'2nd Advancing Candidate:  {second_place_candidate}')
+print(f'1st Advancing Candidate:  {red}{first_place_candidate}{nc}')
+print(f'2nd Advancing Candidate:  {blu}{second_place_candidate}{nc}')
 print('-------------------------------------------------')
 print('=================================================\n')
-print('============  THE END OF THIS REPORT  ===========\n')
+print(f'============  {bolt}THE END OF THIS REPORT{nc}  ===========\n')
 print('=================================================\n')
 
 # export a txt file with the results
