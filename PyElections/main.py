@@ -8,6 +8,7 @@ import operator
 red = '\033[31m'
 grn = '\033[32m'
 blu = '\033[34m'
+yel = '\033[33m'
 nc = '\033[30m'
 bolt = '\033[1m'
 
@@ -71,12 +72,11 @@ sorted_vote_count = list(sorted_candidate_dict.values())    # Candidate's number
 first_place_candidate = list(sorted_candidate_dict.keys())[0]
 second_place_candidate = list(sorted_candidate_dict.keys())[1]
 
-
 # print terminal headers
 print('-------------------------------------------------')
 print('-------------------------------------------------')
 print('')
-print('Author: Henry Le')
+print(f'Author: {red}{bolt}Henry Le{nc}')
 print('')
 print('-------------------------------------------------')
 print('-------------------------------------------------')
@@ -84,7 +84,7 @@ print(f'{bolt}Houston Mayoral Election Results{nc}')
 print('-------------------------------------------------')
 
 # print the total number of votes cast 
-print(f'Total Cast Votes: {blu}{"{:,.0f}".format(total_votes)}{nc}')
+print(f'Total Cast Votes: {yel}{"{:,.0f}".format(total_votes)}{nc}')
 print('-------------------------------------------------')
 
 
@@ -97,7 +97,7 @@ for each_name in range(len(sorted_candidate_name)):
     
 # print the names of the two candidates who will advance to the runoff election.
 print('-------------------------------------------------')
-print(f'1st Advancing Candidate:  {red}{first_place_candidate}{nc}')
+print(f'1st Advancing Candidate:  {grn}{first_place_candidate}{nc}')
 print(f'2nd Advancing Candidate:  {blu}{second_place_candidate}{nc}')
 print('-------------------------------------------------')
 print('=================================================\n')
@@ -110,7 +110,7 @@ with open(output_path, "w", newline="") as outputfile:
     outputfile.write('-------------------------------------------------\n')
     outputfile.write('-------------------------------------------------\n')
     outputfile.write('\n')
-    outputfile.write('Student Name: Henry Le / MW Class')
+    outputfile.write('Author: Henry Le')
     outputfile.write('\n')
     outputfile.write('-------------------------------------------------\n')
     outputfile.write('-------------------------------------------------\n')
