@@ -30,14 +30,14 @@ A quick glance at the final Election Analysis run in Windows Terminal - PowerShe
     * **main.py:** final program (converted from JPNB) that can be run in Windows Terminal.
 ## 4. Topics
 Both Python programs were developed to summarize data:
-### 4.1 PyElections
+#### 4.1 PyElections
 * Total number of votes.
 * List of all candidates.
 * Total votes casted for each candidate.
 * Percentage of votes casted for each candidate.
 * Names of 1<sup>st</sup> and 2<sup>nd</sup> candidates.
 
-### 4.2 PyFinances
+#### 4.2 PyFinances
 *  Total number of months included in the dataset.
 *  Net total amount of "Profit/Losses" over the entire period.
 *  Average changes in "Profit/Losses" over the entire period.
