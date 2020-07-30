@@ -1,6 +1,6 @@
 # First Glance at Python Powerhouse
 ## 1. Background
-No doubt, MS Excel is an excellent tool. Yet, when dealing with large dataset, Python is a more optimal choice. In this project, Python (no libraries) is utilized for processing and analyzing two datasets: Mayoral Election & Company Financial Data. Reports of each process are exported into a text file `.txt`.
+No doubt, MS Excel is an excellent tool. Yet, when dealing with large dataset, Python is a more optimal choice. In this project, Python (no other libraries except CSV to read files & OS for joining path) is utilized for processing and analyzing two datasets: Mayoral Election & Company Financial Data. Reports of each process are exported into a text file `.txt`.
 
 A quick glance at the final Election Analysis run in Windows Terminal - PowerShell:
 <div align="center">
@@ -9,12 +9,14 @@ A quick glance at the final Election Analysis run in Windows Terminal - PowerShe
 
 ## 2. Languages, Tools & Techniques
 * **Languages:**
-    * Python | Bash
+    * Python | Shell Scripts
+* Modules:
+    * CSV | OS
 * **Software/ Applications:**
     * Visual Studio Code | Jupyter Notebook (JPNB) | Notepad++ | Windows Terminal | GitBash | Google Chrome
 * **Operating System:**
     * Windows 10 ver. 1909
-## Table of Contents
+## 3. Table of Contents
 * **Images:** screen captured (.gif) demo of programs run in PowerShell.
 * **PyElections:** folder contains files and analysis of Mayoral Election Data:
     * **Jupyter Notebook:** used during the development of final `main.py`.
@@ -26,15 +28,29 @@ A quick glance at the final Election Analysis run in Windows Terminal - PowerShe
     * **Resources:** raw financial data.
     * **Budget_Report.txt:** exported report after running analysis.
     * **main.py:** final program (converted from JPNB) that can be run in Windows Terminal.
-In this project, I developed the codes to help the city of Houston modernize its vote-counting process for the next mayoral elections. Main taks is to write a script to find only the two candidates with the highest number of votes, who will advance to the runoff election. 
+## 4. Topics
+Both Python programs were developed to summarize data:
+### 4.1 PyElections
+* Total number of votes.
+* List of all candidates.
+* Total votes casted for each candidate.
+* Percentage of votes casted for each candidate.
+* Names of 1<sup>st</sup> and 2<sup>nd</sup> candidates.
 
-Source codes: in file name: "main.py"
+### 4.2 PyFinances
+*  Total number of months included in the dataset.
+*  Net total amount of "Profit/Losses" over the entire period.
+*  Average changes in "Profit/Losses" over the entire period.
+*  Greatest increase in profits (date and amount) over the entire period.
+*  Greatest decrease in losses (date and amount) over the entire period.
 
-Upon running the program, these results will show:
+## 5. Highlights of Key Process
+* File Handler with `with open()`.
+* Loop thru all CSV rows with `for`.
+* Append data to Lists with `list.append()`.
+* Perform simple math do add, or subtract data.
+* Write output to _.txt_ file with `.write()`.
 
-* The total number of votes cast
-* A complete list o**f** candidates who received votes
-* The percentage of votes each candidate won
-* The total number of votes each candidate won
-* Print the names of the two candidates who will advance to the runoff election
-* A text file contained results will only be exported, named: "Houston_Mayoral_Election_Results.txt"
+## 6. How to Use
+* This repository contains all source codes and data needed for replications. If desired, a new dataset with similar structure can be used. If column order changes, modify the `row_data[<index>]` to point to correct columns.
+* `git clone https://github.com/henryle-n/Election-Financial-Analysis.git`
